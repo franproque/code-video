@@ -12,8 +12,11 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         if(config('app.env') == 'local'){
-            $this->call(CategoriesTableSeeder::class);
-            $this->call(GenreTableSeeder::class);
+            $this->call(CategoriaSeeder::class);
+            $this->call(CastMembersSeeder::class);
+            $this->call(GenerosSeeder::class);
+            $this->call(MoviesSeeder::class);
+            $this->call(Movies_CastMemerSeeder::class);
         }
     }
 }

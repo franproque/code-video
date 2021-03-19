@@ -14,9 +14,6 @@ use \Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->name('user')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
-Route::resource('categories', 'CategoryController')->except(['create', 'edit']);
-
+//Route::resource('categories', 'Api/CategoryController')->except(['create', 'edit']);
+//Route::resource('membros','Api/CastMemberController');
+Route::resource('genres','Api/GenreController')->except(['create', 'edit']);
